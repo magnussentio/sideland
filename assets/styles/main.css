@@ -5,12 +5,9 @@ html { line-height: 1.15; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 
 
 body {
     font-family: -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
-    background: #5A23A8 url(../images/bg.png);
-    background-size: cover;
-    margin: 0;
-    font-size: 1rem;
-    font-weight: normal;
-    line-height: 1.5;
+    margin: 0; font-size: 1rem; font-weight: normal; line-height: 1.5;
+
+    background-image: linear-gradient(-35deg, #3D4E81 0%, #5753C9 48%, #6E7FF3 100%);
     color: #fff;
 }
 
@@ -37,7 +34,7 @@ p { margin-top: 0; margin-bottom: 1rem }
     width: 100%; height: 100%; padding: 7vh;
     -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center;
     -ms-flex-pack: center; justify-content: center; -webkit-box-orient: vertical; -webkit-box-direction: normal;
-    -ms-flex-direction: column; flex-direction: column; background: rgba(58, 29, 21, 0.5) }
+    -ms-flex-direction: column; flex-direction: column; }
 
 .land h1 { font-weight: bold }
     .land h1 span { font-size: .48em; font-weight: normal }
@@ -46,12 +43,12 @@ p { margin-top: 0; margin-bottom: 1rem }
     .land p {font-size: 18px }
         @media (max-width: 575px) { .land p { font-size: 15px } }
 
-    .land * { text-align: center; color: #F3E9DC }
+    .land * { text-align: center; }
 
     .land .email,
     .land .btn { display: inline-block; height: 3.3em; line-height: 3.3em; padding: 0 1.5em; text-align: left;
                  white-space: nowrap; background-color: transparent; border: none;
-                 box-shadow: inset 0 0 0 2px rgba(250,247,255,0.1); color: #fff; outline: none !important; }
+                 box-shadow: inset 0 0 0 2px rgba(251,175,214,.5); color: #fff; outline: none !important; }
 
         @media (max-width: 575px) { .land .email, .land .btn { width: 100%; margin-bottom: 10px; text-align: center } }
 
@@ -67,7 +64,9 @@ p { margin-top: 0; margin-bottom: 1rem }
     .land .email::placeholder,
     .land .btn::placeholder { color: rgba(255, 255, 255, 0.6) }
 
-    .land .btn { background: rgba(255, 175, 0, .8); cursor: pointer; border-radius: 3px;
-                 text-transform: uppercase;  text-align: center }
+    .land .btn { background: #FB879A; cursor: pointer; border-radius: 3px; text-transform: uppercase;  text-align: center }
+    .land .btn:hover,
+    .land .btn:active,
+    .land .btn:focus { background: #FE99AA; }
 
     .land legend { font-size: .9rem; margin-bottom: 2em; margin-top: 3em }
