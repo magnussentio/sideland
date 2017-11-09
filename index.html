@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SideLand - free minimal landing template for your side project</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="assets/styles/main.css">
+</head>
+<body>
+  <div class="land">
+
+    <h1>SIDELAND<span>.tld</span></h1><br>
+
+    <p>
+      <b>What’s SideLand?</b><br>An extremely simple free landing page template you can use to
+      tell the world about your project
+      <br>and to collect email addresses of early adopters.</p>
+
+    <form id="contact-form" method="post" action="thank-you" data-netlify="true" name="sunscribe" class="form">
+      <legend>
+        The project is currently in development.
+        Want to be notified when it's launched?<br>
+        Leave your e-mail address below and be the first to play with the tool when it gets released.
+      </legend>
+      <input type="text" name="email" val="" placeholder="email address" class="email">
+      <input type="submit" value="Subscribe" class="btn">
+    </form>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    jQuery(document).ready(function($) {
+     $("#contact-form").submit(function(e) {
+       e.preventDefault();
+       var $form = $("#contact-form");
+       $.post($form.attr("action"), $form.serialize()).then(function() {
+         alert("Thank you for subscribing!");
+       });
+     });
+    });
+  </script>
+</body>
+</html>
